@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlashPill>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>FlashPill</defName>
+    <label>Flash pill</label>
+    <description>A drug for giving a pawn incredible speed</description>
+    <graphicData>
+      <texPath>Drug/Flashpill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>32</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+ 			<li Class="IngestionOutcomeDoer_GiveHediff">
+    <hediffDef>SpeedForceHigh</hediffDef>
+ </li>
+
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+			<researchPrerequisite>DrugProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <HerbalMedicine>25</HerbalMedicine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>
+          <min>0.8</min>
+          <max>0.20</max>
+        </overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>SpeedForceHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Speed</label>
+    <defaultLabelColor>(0,100,0)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>100</maxSeverity>
+    <tendable>false</tendable>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.001</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_Discoverable">
+        <sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
+      </li>
+    </comps>
+      <stages>
+<li>
+<capMods>
+	<li>
+		<capacity>Moving</capacity> 
+		<offset>5000</offset>
+		<hungerRateFactor>4</hungerRateFactor>
+		<restFallFactor>4</restFallFactor>
+	</li>
+
+	<li>
+		<capacity>Manipulation</capacity> 
+		<offset>5000</offset>
+	</li>
+</capMods>
+</li>
+      </stages>
+  </HediffDef>
+  
+</FlashPill>
