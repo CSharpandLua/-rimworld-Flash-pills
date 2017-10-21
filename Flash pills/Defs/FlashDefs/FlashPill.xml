@@ -53,11 +53,11 @@
     <label>Speed</label>
     <defaultLabelColor>(0,100,0)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
-    <maxSeverity>100</maxSeverity>
+    <maxSeverity>10</maxSeverity>
     <tendable>false</tendable>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.001</severityPerDay>
+        <severityPerDay>-0.00015</severityPerDay>
       </li>
       <li Class="HediffCompProperties_Discoverable">
         <sendLetterWhenDiscovered>false</sendLetterWhenDiscovered>
@@ -65,12 +65,13 @@
     </comps>
       <stages>
 <li>
+	<hungerRateFactor>4.5</hungerRateFactor>
+	<restFallFactor>4.5</restFallFactor>
 <capMods>
 	<li>
 		<capacity>Moving</capacity> 
 		<offset>5000</offset>
-		<hungerRateFactor>4</hungerRateFactor>
-		<restFallFactor>4</restFallFactor>
+
 	</li>
 
 	<li>
