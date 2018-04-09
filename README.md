@@ -1,2 +1,5 @@
 # -rimworld-Flash-pills
-Take a pill = get super speed
+
+#No Longer Updating
+
+#I have learned .NET so i can create better mods in the future without just XML
