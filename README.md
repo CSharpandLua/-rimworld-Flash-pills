@@ -1,5 +1,5 @@
 ~~# -rimworld-Flash-pills~~
 
-**No Longer Updating
+**No Longer Updating**
 
-I have learned .NET so i can create better mods in the future without just XML**
+**I have learned .NET so i can create better mods in the future without just XML**
